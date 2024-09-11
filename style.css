@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    height: 90vh;
+    width: 100vw;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+h1 {
+    font-size: 5vw;
+    position: relative;
+    text-align: center;
+    display: inline;
+    color: aquamarine !important;
+}
+
+h1::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+    animation: heading 3s linear infinite;
+}
+
+@keyframes heading {
+    100% {
+        width: 0%;
+    }
+}
+
+.choices {
+    position: relative;
+    height: calc(100% - 30vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12vw;
+    margin-top: 3vw;
+}
+
+.choice {
+    background-color: aquamarine;
+    margin: 2vw;
+    border-radius: 50%;
+   
+    cursor: pointer;
+}
+
+.choice:hover {
+    background-color: chartreuse;
+    border: 5px solid #000;
+
+}
+
+.score-board {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+.score {
+    margin: 0 2vw;
+}
+
+.score p {
+    text-align: center;
+    margin: 2vw 0 0 0;
+    text-transform: capitalize;
+    font-size: 1.6vw;
+    font-weight: 700;
+}
+
+.msg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+.msg-container p {
+    display: inline;
+    background-color: burlywood;
+    text-align: center;
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: aquamarine;
+    padding: 1.6vw;
+    border-radius: 1vw;
+}
+
+#user-score,
+#cmp-score {
+    font-size: 3vw;
+}
+
+@media(max-width:700px) {
+    body{
+        background-color: blueviolet;
+                
+    }
+    h1::before{
+        background-color: blueviolet;   
+    }
+
+    .heading {
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 3vh;
+
+    }
+    .choices {
+        height: 30vh;
+        margin-top: 1px;
+    }
+
+    .choice {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+
+
+    }
+    .score {
+        margin: 0 2vh;
+    }
+
+    .score p {
+
+        margin: 2vh 0 0 0;
+
+        font-size: 20px;
+
+    }
+
+    .msg-container {
+        margin-top: 20px;
+    }
+
+    .msg-container p {
+        font-size: 20px;
+    }
+
+    #user-score,
+    #cmp-score {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+}
